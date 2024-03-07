@@ -8,7 +8,7 @@ const app = express()
 const port = 5000
 
 const corsOptions = {
-  origin: "https://social-roan-seven.vercel.app/login",
+  origin: "https://social-roan-seven.vercel.app",
   method:["POST","GET"],
   credentials: true,
 };
