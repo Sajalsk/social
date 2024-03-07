@@ -95,7 +95,7 @@ const NoteState = (props) => {
       console.log(json)
       const newNotes = notes.filter((note) => { return note._id !== id })
       setNotes(newNotes)
-      props.showAlert("Deleted", "danger");
+      // props.showAlert("Deleted", "danger");
     }
 
   return (

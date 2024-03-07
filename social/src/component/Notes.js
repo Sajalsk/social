@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
  import Notecontext from "../Context/notecontext";
-import Addnote from "./AddNote";
+import Addnote from "./Addnote"
 import Noteitem from "./Noteitem";
 
 const Notes = (props) => {
@@ -54,7 +54,8 @@ const Notes = (props) => {
   // Update and Delete
   return (
     <>
-      <Addnote showAlert={props.showAlert} />
+      <Addnote 
+      showAlert={props.showAlert} />
 
       <button
         ref={ref}
