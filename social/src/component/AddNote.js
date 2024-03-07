@@ -28,14 +28,14 @@ const Addnote = (props) => {
   return (
     <div>
       <div className="container my-3" >
-        <h1>Add a Note</h1>
+        <h1>Add a Day in your Socials</h1>
 
         <form>
 
           {/* Title */}
           <div className="mb-3">
             <label htmlFor="title" className="form-label">
-              Title
+              Subject
             </label>
             <input
               type="text"
@@ -52,7 +52,7 @@ const Addnote = (props) => {
           {/* Description */}
           <div className="mb-3">
             <label htmlFor="description" className="form-label">
-              Description
+              Content
             </label>
             <input
               type="text"
@@ -61,14 +61,14 @@ const Addnote = (props) => {
               name="description"
               value={note.description}
               onChange={onChange}
-              minLength={5} required
+            
             />
           </div>
 
          {/* Tag */}
           <div className="mb-3">
             <label htmlFor="tag" className="form-label">
-            Tag
+            Hashtags
             </label>
             <input
               type="text"
@@ -77,7 +77,7 @@ const Addnote = (props) => {
               name="tag"
               value={note.tag}
               onChange={onChange}
-              minLength={5} required
+            
             />
           </div>
 
@@ -89,22 +89,20 @@ const Addnote = (props) => {
               id="exampleCheck1"
               onChange={onChange}
               value={note.tag}
-              minLength={5} required
+             
             />
              
-            <label className="form-check-label" htmlFor="exampleCheck1">
-              Check me out
-            </label>
+          
           </div>
            
            {/* Disabled */}
           <button
-           disabled={note.title.length<5 || note.description.length<5}   // disabled
+           disabled={note.title.length<1 || note.description.length<1}   // disabled
            type="submit"
            className="btn btn-primary"
            onClick={handleclick}
           >
-            Add Note
+            Add to Remember
           </button>
 
         </form>
