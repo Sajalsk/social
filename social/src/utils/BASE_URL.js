@@ -1,0 +1,1 @@
+export const base_url  = 'https://social-backend-ashen.vercel.app/'

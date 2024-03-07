@@ -45,7 +45,7 @@ const Login = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const response = await fetch("http://localhost:5000/api/auth/login", {   // backend
+    const response = await fetch("https://social-backend-ashen.vercel.app/api/auth/login", {   // backend
       method: "POST",
       headers: {
         "Content-Type": "application/json",
