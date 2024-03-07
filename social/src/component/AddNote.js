@@ -97,7 +97,7 @@ const Addnote = (props) => {
            
            {/* Disabled */}
           <button
-           disabled={note.title.length<1 || note.description.length<1}   // disabled
+           disabled={note.title.length<5 || note.description.length<5}   // disabled
            type="submit"
            className="btn btn-primary"
            onClick={handleclick}
