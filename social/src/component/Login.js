@@ -40,6 +40,7 @@ const Login = (props) => {
   };
   
   const [credentials, setCredentials] = useState({ email: "", password: "" });
+
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -70,11 +71,13 @@ const Login = (props) => {
   };
 
   const onChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value });  // {...} All the value (email&password)    make (name->value )
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });  // {...} All the value (email&password)    make (name->value )    with the help of events call (e)
   };
 
   return (
+
     <form onSubmit={handleSubmit}>
+
       <div className="register" style={style.login}>
         <h1>Qurinomsolutions Login Page</h1>
 
@@ -113,6 +116,7 @@ const Login = (props) => {
         <div className="button" onClick={() => navigate("/Signup")}>
           Register
         </div>
+
       </div>
     </form>
   );

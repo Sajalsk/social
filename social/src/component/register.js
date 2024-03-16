@@ -46,6 +46,7 @@ const Register = (props) => {
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();    // to prevent refresh  w/o enteries
     const {name,email,password} = credentials
     

@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import Addnote from "./Addnote"
 import Noteitem from "./Noteitem";
 
+
+// Display of all notes and modal for update and delete
+
 const Notes = (props) => {
 
   const context = useContext(Notecontext);
@@ -12,7 +15,7 @@ const Notes = (props) => {
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (localStorage.getItem("token")) {
+    if (localStorage.getItem("token")) {     // local storage from browser to display all notes of same token
       getNotes();
     } else {
       navigate("/login");
@@ -54,8 +57,7 @@ const Notes = (props) => {
   // Update and Delete
   return (
     <>
-      <Addnote 
-      showAlert={props.showAlert} />
+      <Addnote showAlert={props.showAlert} />
 
       <button
         ref={ref}
@@ -170,6 +172,7 @@ const Notes = (props) => {
         </div>
        
         {/* Display of all  notes */}
+
         {notes.map((note) => {
           return (
             <Noteitem
@@ -180,6 +183,7 @@ const Notes = (props) => {
             />
           );
         })}
+        
       </div>
     </>
   );

@@ -12,6 +12,7 @@ import Signup from "./component/register";
 import Login from "./component/Login";
 
 function App() {
+  
   const [alert, setAlert] = useState(null);
 
   const showAlert = (message, type) => {

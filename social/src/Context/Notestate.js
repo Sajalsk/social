@@ -3,6 +3,7 @@ import Notecontext from "../Context/notecontext";
 import { useState } from "react";
 
 const NoteState = (props) => {
+  
   const host = "http://localhost:5000";
   const notesinitial = [];
   const [notes, setNotes] = useState(notesinitial);
@@ -16,7 +17,7 @@ const NoteState = (props) => {
       headers: {
         "Content-Type": "application/json",
         "auth-token":
-         localStorage.getItem('token'),
+         localStorage.getItem('token'),          // browser localstorage
       },
     });
     const json = await response.json();
@@ -40,7 +41,7 @@ const NoteState = (props) => {
     });
 
     const note = await response.json();
-    setNotes(notes.concat(note));
+    setNotes(notes.concat(note));   // concat -> to add
     
   };
 
